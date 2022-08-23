@@ -277,12 +277,15 @@ configure(allprojects) { project ->
 			cacheChangingModulesFor 0, "seconds"
 		}
 		repositories {
+		    maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
+		    maven { url 'https://maven.aliyun.com/nexus/content/repositories/jcenter' }
 			mavenCentral()
 			maven { url "https://repo.spring.io/libs-spring-framework-build" }
 		}
 	}
 	configurations.all {
 		resolutionStrategy {
+			force 'xml-apis:xml-apis:3.0.1'
 			cacheChangingModulesFor 0, "seconds"
 			cacheDynamicVersionsFor 0, "seconds"
 		}
