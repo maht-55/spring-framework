@@ -19,4 +19,7 @@ dependencies {
     compile(project(":spring-core"))
     compile(project(":spring-aop"))
     compile(project(":spring-instrument"))
+    compile 'cglib:cglib:3.1'
+
+
 }
